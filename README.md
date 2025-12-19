@@ -20,10 +20,16 @@ Prática de gestão de arquivos e permissões de superusuário (`sudo` / `root`)
 - Gestão de repositórios e manutenção preventiva.
 
 ## 📸 Galeria Técnica
-*(Imagens localizadas na pasta /screenshots)*
 
-### 1. Configuração de Rede (Modo Bridge)
-![Configuração Bridge](./screenshots/arquitetura-bridge.png)
+Configuração da interface de rede em modo Bridge para que a VM opere como um nó real na rede local.
+
+* **SO e Arquitetura:** Rocky Linux 9 configurado como Red Hat (64-bit).
+* **Hardware Virtual:** Alocação de 4GB de RAM e 3 CPUs para alta performance.
+* **Interface de Rede:** Bridge habilitado na interface `wlp3s0` (Wi-Fi Host), permitindo a obtenção de IP externo e conectividade SSH.
+
+![Configuração de Rede Bridge](./screenshots/painel-rockylinux.png)
+
+![Configuração de Rede Bridge](./screenshots/arquitetura-bridge.png)
 *Prova de configuração da interface física em modo Bridge no VirtualBox.*
 
 ### 2. Diagnóstico de Interfaces do Host (Wireless)
