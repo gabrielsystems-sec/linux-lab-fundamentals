@@ -1,55 +1,62 @@
-# 🐧 Linux Lab & Networking Fundamentals
+# 🐧 Linux Fundamentals Lab - Rocky Linux 9 & Ubuntu
 
-Este repositório documenta a construção de um ambiente de laboratório focado em Rocky Linux 9, aplicando conceitos de Engenharia de Software e Arquitetura de Redes.
+Este repositório documenta um laboratório prático de administração Linux, utilizando um sistema nativo baseado em **Kernel Linux** para gerenciar instâncias virtualizadas de alto desempenho.
 
-## 🛠️ Stack Tecnológica
-- **SO:** Rocky Linux 9 (Guest) | Ubuntu/Linux (Host)
-- **Virtualização:** Oracle VM VirtualBox
-- **Protocolos:** TCP/IP, SSH, ICMP
+## 🛠️ Stack Tecnológica (Ambiente de Infraestrutura)
+
+* **SO Host (Nativo):** Ubuntu 24.04 LTS rodando diretamente sobre o Kernel.
+* **Hypervisor:** Oracle VM VirtualBox rodando nativamente.
+* **Instâncias Virtualizadas (Guests):**
+    * **Rocky Linux 9.5 (Blue Onyx):** Instalação **Minimal** (sem interface gráfica) focada em servidor.
+    * **Ubuntu Linux 24.04 LTS:** Instância de apoio para testes de conectividade.
+* **Recursos Alocados (por VM):**
+    * **Processamento:** 3 vCPUs.
+    * **Memória:** 4096 MB RAM.
+    * **Armazenamento:** 60,21 GB VDI.
+* **Rede:** Ambas em modo Bridge (Interface física `wlp3s0`).
+
+## 🛡️ Manutenção Crítica do Sistema & Kernel
+
+Intervenções realizadas diretamente no sistema nativo para viabilizar o ambiente:
+
+* **Resolução de Conflitos APT:** Limpeza de `locks` e cache para desbloquear o gerenciador de pacotes no Host.
+* **Aceleração de Hardware:** Configuração de extensões AMD-V/KVM para permitir virtualização assistida pelo Kernel.
 
 ## 🌐 Arquitetura de Redes e Conectividade
-O maior desafio deste laboratório foi estabelecer a comunicação entre o Host e a VM. Apliquei os seguintes passos:
 
-1. **Configuração de Camada 2:** Transição da interface para **Modo Bridge**, permitindo visibilidade na sub-rede local.
-2. **Mapeamento de Interfaces:** Identificação das diferenças entre interfaces físicas de rede. No host, validei a interface wireless (`wlp3s0`) via `nmcli`, enquanto na VM (Guest), mapeei a interface virtual ethernet (`enp0s3`) via `ip addr`.
-3. **Troubleshooting SSH:** Resolução de falhas de permissão e autenticação para acesso remoto seguro após a validação do endereçamento IP correto.
+1. **Configuração de Camada 2:** Modo Bridge para integração total com a rede local.
+2. **Troubleshooting:** Uso de `systemctl status sshd` e `sudo nmcli connection up enp0s3` para restaurar conexões perdidas entre o Host e a VM Minimal.
 
 ## 💻 Administração do Sistema (Terminal)
-Prática de gestão de arquivos e permissões de superusuário (`sudo` / `root`):
-- Criação e movimentação de diretórios (`mkdir`, `mkdir -p`, `cp -r`).
-- Gestão de repositórios e manutenção preventiva.
 
-## 📸 Galeria Técnica
+* **Gestão de Arquivos:** Uso de `mkdir -p`, `cp -r` e `mv` para organização lógica.
+* **Gerenciamento de Pacotes:** Operação via `dnf` (Rocky) e `apt` (Ubuntu).
+* **Segurança:** Administração de permissões via `sudo` e acesso root.
 
-### 1. Configuração de Rede (Modo Bridge)
+  
+## 📸 Galeria Técnica (As 5 Evidências)
 
-Configuração da interface de rede e especificações de hardware da VM para o laboratório.
+### 1. Infraestrutura e Hardware
+Visão do VirtualBox gerenciando as instâncias sobre o sistema nativo.
+![Painel Rocky Linux](./screenshots/painel-rockylinux.png)
 
-* **Sistema Operacional:** Rocky Linux 9, operando sob arquitetura Red Hat (64-bit).
-* **Recursos de Hardware:** 4096 MB de RAM e 3 Processadores alocados.
-* **Rede:** Adaptador em modo Bridge utilizando a interface física `wlp3s0`.
-* **Armazenamento:** Disco virtual VDI de 60,21 GB.
-
-![Configuração do Painel Rocky Linux](./screenshots/painel-rockylinux.png)
-*Prova de configuração da interface física em modo Bridge no VirtualBox.*
-
-### 2. Diagnóstico de Interfaces do Host (Wireless)
+### 2. Validação da Interface Host
+Diagnóstico da interface física `wlp3s0` no Ubuntu nativo.
 ![Diagnóstico Host](./screenshots/diagnostico-host.png)
-*Uso do nmcli para mapear a interface wireless (wlp3s0) do host Nitro.*
 
-### 3. Validação de IP na VM (Ethernet Virtual)
+### 3. Endereçamento IP (VM Minimal)
+Confirmação do IP recebido via modo Bridge no Rocky Linux.
 ![Diagnóstico IP](./screenshots/diagnostico-ip.png)
-*Comando ip addr confirmando o endereçamento IPv4 na interface ethernet virtual enp0s3.*
 
-### 4. Manipulação de Arquivos e Diretórios
+### 4. Gestão de Arquivos via CLI
+Demonstração de manipulação de diretórios e manutenção de sistema.
 ![Comandos Terminal](./screenshots/comandos-terminal.png)
-*Demonstração de comandos administrativos e navegação no sistema de arquivos.*
 
-### 5. Troubleshooting de Segurança (SSH)
+### 5. Resolução de Erros SSH
+Registro técnico do diagnóstico e correção de falhas de acesso remoto.
 ![Erro SSH](./screenshots/erro-ssh.png)
-*Análise de falha de permissão de acesso ao serviço SSH.*
 
-### 🛡️ Manutenção de Sistema & Kernel
-Além da rede, realizei intervenções críticas no sistema operacional host para viabilizar o ambiente:
-- **Resolução de Conflitos APT:** Tratamento de erro de repositórios conflitantes via terminal, utilizando `sudo rm` e limpeza de cache para desbloquear o gerenciador de pacotes.
-- **Aceleração de Hardware:** Diagnóstico de erros de extensão AMD-V/KVM, compreendendo a interação entre o hypervisor e o hardware físico.
+---
+
+### 🤝 Contato
+Sinta-se à vontade para se conectar comigo para discutir Kernel, Linux e infraestrutura!
