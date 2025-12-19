@@ -21,15 +21,16 @@ Prática de gestão de arquivos e permissões de superusuário (`sudo` / `root`)
 
 ## 📸 Galeria Técnica
 
-Configuração da interface de rede em modo Bridge para que a VM opere como um nó real na rede local.
+### 1. Configuração de Rede (Modo Bridge)
 
-* **SO e Arquitetura:** Rocky Linux 9 configurado como Red Hat (64-bit).
-* **Hardware Virtual:** Alocação de 4GB de RAM e 3 CPUs para alta performance.
-* **Interface de Rede:** Bridge habilitado na interface `wlp3s0` (Wi-Fi Host), permitindo a obtenção de IP externo e conectividade SSH.
+Configuração da interface de rede e especificações de hardware da VM para o laboratório.
 
-![Configuração de Rede Bridge](./screenshots/painel-rockylinux.png)
+* **Sistema Operacional:** Rocky Linux 9, operando sob arquitetura Red Hat (64-bit).
+* **Recursos de Hardware:** 4096 MB de RAM e 3 Processadores alocados.
+* **Rede:** Adaptador em modo Bridge utilizando a interface física `wlp3s0`.
+* **Armazenamento:** Disco virtual VDI de 60,21 GB.
 
-![Configuração de Rede Bridge](./screenshots/arquitetura-bridge.png)
+![Configuração do Painel Rocky Linux](./screenshots/painel-rockylinux.png)
 *Prova de configuração da interface física em modo Bridge no VirtualBox.*
 
 ### 2. Diagnóstico de Interfaces do Host (Wireless)
