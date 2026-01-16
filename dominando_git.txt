@@ -1,1 +1,23 @@
-lista de comandos na seção 1 a 5
+### GUIA DE COMANDOS - FUNDAMENTOS LINUX & GIT ###
+# Notas de estudo do Gabriel - Jan/2026
+
+[ GIT - O QUE EU USEI NA PRÁTICA ]
+- git init: Usei para começar o lab do zero.
+- git clone: Para baixar o repo que o Mazuco criou.
+- git checkout -b: Usei para criar a branch 'lab-linux' (Aula 447).
+- git push -u: Para subir meu arquivo e não ter que digitar tudo de novo depois.
+
+[ GIT - COMANDOS "SALVA-VIDAS" ]
+- git cat-file -p [hash]: Usei para ver o que tem dentro do commit quando fiquei em dúvida.
+- git log -1: Para ver rápido o último commit que eu fiz.
+- git config --global --add safe.directory: Resolve o erro de permissão que deu no root.
+
+[ VIM - ATALHOS QUE DECOREI ]
+- :wq  (salvar e sair)
+- i    (entrar no modo de inserção)
+- Esc  (sair de qualquer modo)
+
+# SEGURANÇA E PERMISSÕES (RESOLUÇÃO DE ERROS)
+git config --global --add safe.directory [caminho]
+# Usei este comando para resolver o erro 'dubious ownership' 
+# quando alternei entre o usuário Gabriel e o Root.
