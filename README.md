@@ -35,18 +35,18 @@ Workflow profissional de Git para rastreabilidade de configurações.
 ## 📊 Evidências Técnicas
 
 ### 01. Arquitetura e Hipervisor
-![Painel Infra](./screenshots/painel-infra.png)
+![Painel Infra](./assets/painel-infra.png)
 
 ### 02. Conectividade de Rede (Bridge Mode)
-![Diagnóstico de Rede](./screenshots/diagnostico-rede.png)
+![Diagnóstico de Rede](./assets/diagnostico-rede.png)
 
 ### 03. Otimização do Estado do Servidor (SSH Access)
-![Systemd Target](./screenshots/systemd-target.png)
+![Systemd Target](./assets/systemd-target.png)
 
 ### 04. Troubleshooting de Segurança
-![SSH Fix](./screenshots/ssh-fix.png)
+![SSH Fix](./assets/ssh-fix.png)
 
 ### 05. Workflow de Engenharia (Git Log)
-![Git Management](./screenshots/git-management.png)
+![Git Management](./assets/git-management.png)
 
 ---
