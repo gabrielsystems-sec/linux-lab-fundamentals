@@ -1,6 +1,10 @@
 # Linux Infrastructure Laboratory: Rocky Linux & Ubuntu
 
-Este repositório documenta a implementação de um ambiente de servidores Linux para simulação de infraestrutura corporativa. O projeto foca em administração via CLI, segurança SSH e gerenciamento de estados do sistema (Systemd).
+## 🛠️ Tech Stack & Skills
+* **Systems:** Linux (Ubuntu/Rocky), Systemd, User Management.
+* **Networking:** SSH, TCP/IP, Bridge Networking.
+* **Security:** Permissions (chmod/chown), SSH Hardening.
+* **Tools:** Git, VirtualBox, CLI Mastery.
 
 ## 🏗️ Ambiente de Engenharia
 
@@ -16,34 +20,33 @@ Este repositório documenta a implementação de um ambiente de servidores Linux
 ## 🛠️ Implementações e Troubleshooting
 
 ### 1. Otimização de Performance (Systemd)
-Configuração do sistema para operar em modo **Minimal Server**, reduzindo o consumo de recursos ao eliminar a interface gráfica.
+Configuração do sistema para operar em modo **Minimal Server**.
 * **Validação:** `systemctl get-default` -> `multi-user.target`.
 
 ### 2. Troubleshooting de Segurança: SSH Access
-Durante a configuração, identifiquei um erro de `Permission denied (publickey,password)` ao tentar o acesso remoto.
-* **Diagnóstico:** Verificação de políticas de acesso no `/etc/ssh/sshd_config` e integridade das credenciais do usuário.
-* **Resolução:** Ajuste de permissões de usuário e validação do serviço SSH, garantindo acesso seguro via terminal remoto (Host -> Guest).
+Identificação e correção do erro de `Permission denied (publickey,password)`.
+* **Resolução:** Ajuste de permissões de usuário e validação do `/etc/ssh/sshd_config`.
 
 ### 3. Gestão de Versão (Git Mastery)
-Uso de workflows profissionais de Git para rastreabilidade de todas as alterações de configuração no laboratório.
+Workflow profissional de Git para rastreabilidade de configurações.
 
 ---
 
 ## 📊 Evidências Técnicas
 
 ### 01. Arquitetura e Hipervisor
-![Painel Infra](./screenshotssect4.5/painel-infra.png)
+![Painel Infra](./screenshots/painel-infra.png)
 
 ### 02. Conectividade de Rede (Bridge Mode)
-![Diagnóstico de Rede](./screenshotssect4.5/diagnostico-rede.png)
+![Diagnóstico de Rede](./screenshots/diagnostico-rede.png)
 
 ### 03. Otimização do Estado do Servidor (SSH Access)
-![Systemd Target](./screenshotssect4.5/systemd-target.png)
+![Systemd Target](./screenshots/systemd-target.png)
 
 ### 04. Troubleshooting de Segurança
-![SSH Fix](./screenshotssect4.5/ssh-fix.png)
+![SSH Fix](./screenshots/ssh-fix.png)
 
 ### 05. Workflow de Engenharia (Git Log)
-![Git Management](./screenshotssect4.5/git-management.png)
+![Git Management](./screenshots/git-management.png)
 
 ---
