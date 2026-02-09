@@ -30,6 +30,14 @@ Identificação e correção do erro de `Permission denied (publickey,password)`
 ### 3. Gestão de Versão (Git Mastery)
 Workflow profissional de Git para rastreabilidade de configurações.
 
+### 4. Troubleshooting de Rede: Migração Física (CE)
+Resolução de conflitos de persistência de IP após migração do laboratório.
+* **Diagnóstico:** Interface retendo registros de múltiplas sub-redes e cache de DHCP obsoleto.
+* **Resolução:** Limpeza de leases em `/var/lib/NetworkManager/` e implementação de IP Estático via `nmcli`.
+* **Validação:** Restabelecimento de conectividade SSH e atualização do mapeamento em `/etc/hosts`.
+
+> **Nota de Portfólio:** Este incidente demonstrou a importância da gestão de persistência em redes móveis e consolidou o uso de endereçamento estático para servidores críticos.
+
 ---
 
 ## 📊 Evidências Técnicas
