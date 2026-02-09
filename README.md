@@ -36,6 +36,8 @@ Resolução de conflitos de persistência de IP após migração do laboratório
 * **Resolução:** Limpeza de leases em `/var/lib/NetworkManager/` e implementação de IP Estático via `nmcli`.
 * **Validação:** Restabelecimento de conectividade SSH e atualização do mapeamento em `/etc/hosts`.
 
+* **Bônus - DNS Fix:** Após setar o IP estático, a resolução de nomes (DNS) foi perdida. Identifiquei a falha via `ping 8.8.8.8` e corrigi configurando os DNS do Google (`8.8.8.8`, `8.8.4.4`) via `nmcli` para restaurar o acesso ao GitHub. 
+
 > **Nota de Portfólio:** Este incidente demonstrou a importância da gestão de persistência em redes móveis e consolidou o uso de endereçamento estático para servidores críticos.
 
 ---
