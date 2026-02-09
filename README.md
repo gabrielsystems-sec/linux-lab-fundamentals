@@ -44,19 +44,22 @@ Resolução de conflitos de persistência de IP após migração do laboratório
 
 ## 📊 Evidências Técnicas
 
-### 01. Arquitetura e Hipervisor
-![Painel Infra](./assets/painel-infra.png)
+### 01. Case Study: DNS Troubleshooting & Git Integration
+Análise de logs e correção de DNS via CLI.
+| Falha Identificada | Solução Aplicada |
+| :--- | :--- |
+| ![DNS Failure](./assets/net-git-dns-failure.png) | ![DNS Success](./assets/net-dns-fix-validation.png) |
 
-### 02. Conectividade de Rede (Bridge Mode)
-![Diagnóstico de Rede](./assets/diagnostico-rede.png)
+### 02. Workflow de Engenharia (Git Log)
+![Git Management](./assets/git-management.png)
 
-### 03. Otimização do Estado do Servidor (SSH Access)
-![Systemd Target](./assets/systemd-target.png)
-
-### 04. Troubleshooting de Segurança
+### 03. Segurança e Hardening (SSH Fix)
 ![SSH Fix](./assets/ssh-fix.png)
 
-### 05. Workflow de Engenharia (Git Log)
-![Git Management](./assets/git-management.png)
+### 04. Configuração de Rede Estática (Implementation).
+![Static IP Config](./assets/net-static-ip-implementation.png)
+
+### 05. Arquitetura e Hipervisor
+![Painel Infra](./assets/painel-infra.png)
 
 ---
