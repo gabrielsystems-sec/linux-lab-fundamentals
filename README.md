@@ -3,7 +3,7 @@
 ### 01. Case Study: Migração de Rede e Troubleshooting de DNS (Fortaleza Lab)
 Após a migração física, implementei o endereçamento estático para consolidar a infraestrutura crítica.
 * **Diagnóstico:** Conflito de sub-redes e cache de DHCP obsoleto em `/var/lib/NetworkManager/`.
-* **Resolução:** Expurgue de leases antigos e injeção manual de DNS (8.8.8.8) via `nmcli`.
+* **Resolução:** Expurgo de leases antigos e injeção manual de DNS (8.8.8.8) via `nmcli`.
 * **Impacto:** Restabelecimento da integração com GitHub e persistência de IP `192.168.1.250`.
 
 | Falha Identificada (DNS Error) | Solução e Validação (Success) |
