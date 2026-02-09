@@ -1,65 +1,37 @@
-# Linux Infrastructure Laboratory: Rocky Linux & Ubuntu
+## 📊 Engenharia de Sistemas & Evidências
 
-## 🛠️ Tech Stack & Skills
-* **Systems:** Linux (Ubuntu/Rocky), Systemd, User Management.
-* **Networking:** SSH, TCP/IP, Bridge Networking.
-* **Security:** Permissions (chmod/chown), SSH Hardening.
-* **Tools:** Git, VirtualBox, CLI Mastery.
+### 01. Case Study: Migração de Rede e Troubleshooting de DNS (Fortaleza Lab)
+Após a migração física, implementei o endereçamento estático para consolidar a infraestrutura crítica.
+* **Diagnóstico:** Conflito de sub-redes e cache de DHCP obsoleto em `/var/lib/NetworkManager/`.
+* **Resolução:** Expurgue de leases antigos e injeção manual de DNS (8.8.8.8) via `nmcli`.
+* **Impacto:** Restabelecimento da integração com GitHub e persistência de IP `192.168.1.250`.
 
-## 🏗️ Ambiente de Engenharia
-
-### Host (Máquina Física)
-* **OS:** Ubuntu 24.04 LTS (Kernel 6.14.0-36-generic)
-* **Virtualização:** VirtualBox com aceleração KVM ativa.
-
-### Guest (Enterprise Server)
-* **OS:** Rocky Linux 9.7 (Minimal Install)
-* **Recursos:** 3 vCPUs | 4GB RAM | 60GB Storage.
-* **Rede:** Layer 2 Bridge Mode (Interface `wlp3s0`).
-
-## 🛠️ Implementações e Troubleshooting
-
-### 1. Otimização de Performance (Systemd)
-Configuração do sistema para operar em modo **Minimal Server**.
-* **Validação:** `systemctl get-default` -> `multi-user.target`.
-
-### 2. Troubleshooting de Segurança: SSH Access
-Identificação e correção do erro de `Permission denied (publickey,password)`.
-* **Resolução:** Ajuste de permissões de usuário e validação do `/etc/ssh/sshd_config`.
-
-### 3. Gestão de Versão (Git Mastery)
-Workflow profissional de Git para rastreabilidade de configurações.
-
-### 4. Troubleshooting de Rede: Migração Física (CE)
-Resolução de conflitos de persistência de IP após migração do laboratório.
-* **Diagnóstico:** Interface retendo registros de múltiplas sub-redes e cache de DHCP obsoleto.
-* **Resolução:** Limpeza de leases em `/var/lib/NetworkManager/` e implementação de IP Estático via `nmcli`.
-* **Validação:** Restabelecimento de conectividade SSH e atualização do mapeamento em `/etc/hosts`.
-
-* **Bônus - DNS Fix:** Após setar o IP estático, a resolução de nomes (DNS) foi perdida. Identifiquei a falha via `ping 8.8.8.8` e corrigi configurando os DNS do Google (`8.8.8.8`, `8.8.4.4`) via `nmcli` para restaurar o acesso ao GitHub. 
-
-> **Nota de Portfólio:** Este incidente demonstrou a importância da gestão de persistência em redes móveis e consolidou o uso de endereçamento estático para servidores críticos.
-
----
-
-## 📊 Evidências Técnicas
-
-### 01. Case Study: DNS Troubleshooting & Git Integration
-Análise de logs e correção de DNS via CLI.
-| Falha Identificada | Solução Aplicada |
+| Falha Identificada (DNS Error) | Solução e Validação (Success) |
 | :--- | :--- |
 | ![DNS Failure](./assets/net-git-dns-failure.png) | ![DNS Success](./assets/net-dns-fix-validation.png) |
 
-### 02. Workflow de Engenharia (Git Log)
-![Git Management](./assets/git-management.png)
-
-### 03. Segurança e Hardening (SSH Fix)
+### 02. Segurança e Hardening: SSH Access
+Identificação e correção do erro `Permission denied (publickey,password)`.
+* **Fix:** Auditoria do `/etc/ssh/sshd_config` e ajuste de permissões de diretórios e chaves.
 ![SSH Fix](./assets/ssh-fix.png)
 
-### 04. Configuração de Rede Estática (Implementation).
-![Static IP Config](./assets/net-static-ip-implementation.png)
+### 03. Workflow de Engenharia: Git Mastery
+Domínio de versionamento para rastreabilidade de configurações de infraestrutura.
+![Git Management](./assets/git-management.png)
 
-### 05. Arquitetura e Hipervisor
-![Painel Infra](./assets/painel-infra.png)
+### 04. Performance e Estado do Sistema (Systemd)
+Configuração para **Minimal Server Mode** (multi-user.target), reduzindo o overhead do sistema e a superfície de ataque.
+* **Validação:** `systemctl get-default` -> `multi-user.target`.
+![Systemd Status](./assets/systemd-target.png)
 
 ---
+
+## 🛡️ Terminal Survival Guide (Methodology)
+
+Diretrizes que sigo para garantir a integridade de ambientes de produção:
+
+* **Safety Net:** Uso de aliases (`rm -i`, `cp -i`, `mv -i`) para evitar destruição acidental de dados.
+* **Vim Proficiency:** Edição ágil de configurações em servidores *headless* via CLI.
+* **System Hygiene:** Monitoramento ativo de `/var/log` e limpeza de arquivos residuais de rede.
+
+> **Nota de Portfólio:** Este repositório reflete uma mentalidade de "Infrastructure as Code" (IaC) e resiliência técnica, priorizando segurança e documentação rigorosa.
