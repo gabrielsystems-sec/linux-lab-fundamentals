@@ -1,1 +1,4 @@
 ANOTACOES
+# Ignorar arquivos temporários de editores
+*~
+*.swp
