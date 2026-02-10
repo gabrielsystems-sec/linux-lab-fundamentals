@@ -1,3 +1,4 @@
+#!/bin/bash
 ### GUIA DE COMANDOS - FUNDAMENTOS LINUX & GIT ###
 # Notas de estudo do Gabriel - Jan/2026
 

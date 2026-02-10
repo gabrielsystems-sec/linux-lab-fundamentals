@@ -1,3 +1,4 @@
+#!/bin/bash
 ### LINUX SYSTEM FOUNDATIONS - ESSENTIALS ###
 # Foco: Administração de Sistemas & Performance (Repo 1 & 2)
 
