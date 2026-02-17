@@ -11,7 +11,7 @@ Este repositório documenta a base sólida da minha stack tecnológica. O foco a
 ### **1. Auditoria de Hardware e Diagnóstico de Sistema**
 Antes de qualquer implementação, realizo o mapeamento completo da arquitetura. Entender os limites do hardware e as capacidades do Kernel é o primeiro passo para uma infraestrutura resiliente.
 
-![System Audit](docs/assets/auditoria-hardware-sistema-inx.png)
+![System Audit](docs/assets/auditoria-hardware-sistema-inxi.png)
 *Legenda: Extração de metadados de CPU, Kernel e Repositórios para validação de ambiente.*
 
 **Habilidades demonstradas:**
@@ -23,8 +23,7 @@ Antes de qualquer implementação, realizo o mapeamento completo da arquitetura.
 ### **2. Troubleshooting de Rede e Persistência (Case Study)**
 Após uma migração física, identifiquei e resolvi falhas de resolução de nomes (DNS) que bloqueavam o ciclo de CI/CD via GitHub.
 
-![DNS Resolution Success](docs/assets/net-dns-fix-validation.png)
-*Legenda: Validação de conectividade externa após correção de cache e injeção de DNS.*
+![DNS Resolution Success](docs/assets/net-dns-fix-validation.png) *Legenda: Validação de conectividade externa após correção de cache e injeção de DNS.*
 
 > **🔐 Nota de Infraestrutura:** > Implementei a transição de DHCP para **IP Estático** visando a persistência de serviços internos, eliminando conflitos de sub-redes e garantindo acessibilidade constante via SSH.
 > * [Evidência de Implementação Estática](docs/assets/net-static-ip-implementation.png).
@@ -34,8 +33,7 @@ Após uma migração física, identifiquei e resolvi falhas de resolução de no
 ### **3. Git Mastery: Governança e Resolução de Conflitos**
 O Git é a minha principal ferramenta para "Infrastructure as Code". Aqui, demonstro que domino não apenas os comandos básicos, mas o fluxo de recuperação e correção de erros.
 
-![Git Management](docs/assets/git-management.png)
-*Legenda: Gestão de branches e rastreabilidade de arquivos de configuração.*
+![Git Management](docs/assets/git-management.png) *Legenda: Gestão de branches e rastreabilidade de arquivos de configuração.*
 
 **Diferencial Técnico:**
 * **Conflict Resolution:** Experiência prática em resolver divergências de histórico e garantir a integridade da branch main.
