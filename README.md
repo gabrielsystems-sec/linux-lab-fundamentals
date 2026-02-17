@@ -1,37 +1,57 @@
-## 📊 Engenharia de Sistemas & Evidências
+# Repo 1: Linux Foundations & Git Mastery 🐧
 
-### 01. Case Study: Migração de Rede e Troubleshooting de DNS (Fortaleza Lab)
-Após a migração física, implementei o endereçamento estático para consolidar a infraestrutura crítica.
-* **Diagnóstico:** Conflito de sub-redes e cache de DHCP obsoleto em `/var/lib/NetworkManager/`.
-* **Resolução:** Expurgo de leases antigos e injeção manual de DNS (8.8.8.8) via `nmcli`.
-* **Impacto:** Restabelecimento da integração com GitHub e persistência de IP `192.168.1.250`.
+Este repositório documenta a base sólida da minha stack tecnológica. O foco aqui é a compreensão profunda do ecossistema Linux e o domínio do Git como ferramenta de governança de infraestrutura.
 
-| Falha Identificada (DNS Error) | Solução e Validação (Success) |
-| :--- | :--- |
-| ![DNS Failure](./assets/net-git-dns-failure.png) | ![DNS Success](./assets/net-dns-fix-validation.png) |
+> **🎯 Perfil:** Entusiasta de Linux e Cibersegurança em busca de **Estágio/Oportunidade Júnior**. Este projeto demonstra minha capacidade de realizar auditorias de baixo nível, resolver falhas críticas de conectividade e manter a integridade do código.
 
-### 02. Segurança e Hardening: SSH Access
-Identificação e correção do erro `Permission denied (publickey,password)`.
-* **Fix:** Auditoria do `/etc/ssh/sshd_config` e ajuste de permissões de diretórios e chaves.
-![SSH Fix](./assets/ssh-fix.png)
+---
 
-### 03. Workflow de Engenharia: Git Mastery
-Domínio de versionamento para rastreabilidade de configurações de infraestrutura.
-![Git Management](./assets/git-management.png)
+## 🛠️ Laboratórios de Engenharia
 
-### 04. Performance e Estado do Sistema (Systemd)
-Configuração para **Minimal Server Mode** (multi-user.target), reduzindo o overhead do sistema e a superfície de ataque.
-* **Validação:** `systemctl get-default` -> `multi-user.target`.
-![Systemd Status](./assets/systemd-target.png)
+### **1. Auditoria de Hardware e Diagnóstico de Sistema**
+Antes de qualquer implementação, realizo o mapeamento completo da arquitetura. Entender os limites do hardware e as capacidades do Kernel é o primeiro passo para uma infraestrutura resiliente.
+
+![System Audit](docs/assets/auditoria-hardware-sistema-inx.png)
+*Legenda: Extração de metadados de CPU, Kernel e Repositórios para validação de ambiente.*
+
+**Habilidades demonstradas:**
+* **System Mapping:** Identificação de gargalos e capacidades de processamento.
+* **Kernel Awareness:** Validação de versões e módulos ativos para suporte a containers e segurança.
+
+---
+
+### **2. Troubleshooting de Rede e Persistência (Case Study)**
+Após uma migração física, identifiquei e resolvi falhas de resolução de nomes (DNS) que bloqueavam o ciclo de CI/CD via GitHub.
+
+![DNS Resolution Success](docs/assets/net-dns-fix-validation.png)
+*Legenda: Validação de conectividade externa após correção de cache e injeção de DNS.*
+
+> **🔐 Nota de Infraestrutura:** > Implementei a transição de DHCP para **IP Estático** visando a persistência de serviços internos, eliminando conflitos de sub-redes e garantindo acessibilidade constante via SSH.
+> * [Evidência de Implementação Estática](docs/assets/net-static-ip-implementation.png).
+
+---
+
+### **3. Git Mastery: Governança e Resolução de Conflitos**
+O Git é a minha principal ferramenta para "Infrastructure as Code". Aqui, demonstro que domino não apenas os comandos básicos, mas o fluxo de recuperação e correção de erros.
+
+![Git Management](docs/assets/git-management.png)
+*Legenda: Gestão de branches e rastreabilidade de arquivos de configuração.*
+
+**Diferencial Técnico:**
+* **Conflict Resolution:** Experiência prática em resolver divergências de histórico e garantir a integridade da branch main.
+* **Flow Visualization:** ![Git Troubleshooting](docs/assets/git-troubleshooting-flow.png)
 
 ---
 
 ## 🛡️ Terminal Survival Guide (Methodology)
 
-Diretrizes que sigo para garantir a integridade de ambientes de produção:
+Diretrizes rigorosas para administração de servidores em ambientes de missão crítica:
 
-* **Safety Net:** Uso de aliases (`rm -i`, `cp -i`, `mv -i`) para evitar destruição acidental de dados.
-* **Vim Proficiency:** Edição ágil de configurações em servidores *headless* via CLI.
-* **System Hygiene:** Monitoramento ativo de `/var/log` e limpeza de arquivos residuais de rede.
+* **Minimalismo Operacional:** Uso do `multi-user.target` para reduzir o overhead e a superfície de ataque. ![Systemd Status](docs/assets/systemd-target.png)
+* **Monitoramento Proativo:** Visualização em tempo real da saúde da máquina via [Paineis de Infraestrutura](docs/assets/painel-infra.png).
+* **Safety First:** Uso de aliases protetivos e edição ágil via **Vim** para evitar downtime em janelas de manutenção.
 
-> **Nota de Portfólio:** Este repositório reflete uma mentalidade de "Infrastructure as Code" (IaC) e resiliência técnica, priorizando segurança e documentação rigorosa.
+---
+
+## 🚀 Contato
+Estou pronto para aplicar estes fundamentos em desafios reais e escalar para soluções de automação e cloud.

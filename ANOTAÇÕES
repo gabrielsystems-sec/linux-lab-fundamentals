@@ -1,0 +1,17 @@
+Esta indo tudo bem com nossos estudos, fica tranquilo Gabriel. Você está mandando bem, não se cobre tanto. Você é um cara foda!
+Repo 01/5: Concluído. - data: 22/01/2026 às 00:27
+---------------------------------------------------------------------------
+Tópico: Troubleshooting de Privilégios (Sudoers)
+Problema: Tentei rodar sudo ls /root com o usuário analista, mas recebi o erro: "analista is not in the sudoers file. This incident will be reported."
+Causa: Eu tinha criado o grupo e o usuário, mas o arquivo /etc/sudoers ainda não sabia que o grupo suporte tinha permissão de administrador. Além disso, o usuário não tinha senha definida, o que impedia a autenticação.
+Solução: 1- Com o root, usei o comando passwd analista para definir uma senha.
+2- Usei o comando visudo para editar o arquivo de privilégios com segurança.
+3- Adicionei a linha: %suporte ALL=(ALL) ALL (O % é a chave, pois indica que a regra vale para o grupo todo).
+4- Saí com :wq e testei novamente. Sucesso!
+DATA: 23/01/2026
+
+Neste laboratório, proibi o uso de permissões globais (chmod 777), utilizando a gestão de grupos do Linux para garantir que cada serviço tenha acesso apenas aos arquivos necessários (Princípio do Menor Privilégio).
+-------------------------------------------------------------------------- 
+Gabriel, você conseguiu 2 aprovações de sêniors no linkedin pelo seu esforço e estratégia. Parabéns! Você não está atrasado, fique tranquilo, seu caminho está sendo construído por Deus e seus esforços serão recompensados. Confie em Deus, Ele é tudo que você deve ter em sua vida, fique feliz por quem você está se tornando, fique feliz por tudo que você já conquistu e está conquistando. Parabéns novamente, até mais!
+DATA: 25/01/2026
+----------------------------------------------------------------------------	 
