@@ -11,7 +11,7 @@ Este repositório documenta o alicerce da minha stack tecnológica. O foco aqui 
 Abaixo estão as principais implementações de base realizadas para garantir um ambiente estável e auditável.
 
 <details>
-<summary><b>🔍 1. Mapeamento de Hardware e Kernel</b></summary>
+<summary><b> 1. Mapeamento de Hardware e Kernel</b></summary>
 
 Antes de qualquer implementação, realizo o mapeamento completo da arquitetura para garantir conformidade com os requisitos de software.
 * **Extração de Metadados:** Identificação de CPU, Kernel e Repositórios.
@@ -19,7 +19,7 @@ Antes de qualquer implementação, realizo o mapeamento completo da arquitetura 
 </details>
 
 <details>
-<summary><b>🌐 2. Troubleshooting de Rede e Conectividade</b></summary>
+<summary><b> 2. Troubleshooting de Rede e Conectividade</b></summary>
 
 Resolução de falhas críticas de infraestrutura para garantir a persistência dos serviços.
 * **DNS Fix:** Correção de falhas de resolução que impediam o acesso a repositórios externos.
@@ -28,7 +28,7 @@ Resolução de falhas críticas de infraestrutura para garantir a persistência 
 </details>
 
 <details>
-<summary><b>🌿 3. Governança com Git Mastery</b></summary>
+<summary><b> 3. Governança com Git Mastery</b></summary>
 
 O Git é utilizado como ferramenta de governança. Demonstro domínio em fluxos de trabalho, gestão de branches e integridade de código.
 * **Gestão de Histórico:** Rastreabilidade total de mudanças em arquivos de configuração.
