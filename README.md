@@ -1,55 +1,63 @@
 # Repo 1: Linux Foundations & Git Mastery 🐧
 
-Este repositório documenta a base sólida da minha stack tecnológica. O foco aqui é a compreensão profunda do ecossistema Linux e o domínio do Git como ferramenta de governança de infraestrutura.
+Este repositório documenta o alicerce da minha stack tecnológica. O foco aqui é a compreensão profunda do ecossistema Linux e o domínio do Git como ferramenta de governança e colaboração técnica.
 
-> **🎯 Perfil:** Entusiasta de Linux e Cibersegurança em busca de **Estágio/Oportunidade Júnior**. Este projeto demonstra minha capacidade de realizar auditorias de baixo nível, resolver falhas críticas de conectividade e manter a integridade do código.
-
----
-
-## 🛠️ Laboratórios de Engenharia
-
-### **1. Auditoria de Hardware e Diagnóstico de Sistema**
-Antes de qualquer implementação, realizo o mapeamento completo da arquitetura. Entender os limites do hardware e as capacidades do Kernel é o primeiro passo para uma infraestrutura resiliente.
-
-![System Audit](docs/assets/auditoria-hardware-sistema-inxi.png)
-*Legenda: Extração de metadados de CPU, Kernel e Repositórios para validação de ambiente.*
-
-**Habilidades demonstradas:**
-* **System Mapping:** Identificação de gargalos e capacidades de processamento.
-* **Kernel Awareness:** Validação de versões e módulos ativos para suporte a containers e segurança.
+> **🎯 Objetivo Profissional:** Demonstrar domínio em operações fundamentais de sistema, resolução de problemas de rede e versionamento de código, competências essenciais para qualquer operação de TI moderna.
 
 ---
 
-### **2. Troubleshooting de Rede e Persistência (Case Study)**
-Após uma migração física, identifiquei e resolvi falhas de resolução de nomes (DNS) que bloqueavam o ciclo de CI/CD via GitHub.
+## 🛠️ Laboratórios de Engenharia & Diagnóstico
 
-![DNS Resolution Success](docs/assets/net-dns-fix-validation.png) *Legenda: Validação de conectividade externa após correção de cache e injeção de DNS.*
+Abaixo estão as principais implementações de base realizadas para garantir um ambiente estável e auditável.
 
-> **🔐 Nota de Infraestrutura:** > Implementei a transição de DHCP para **IP Estático** visando a persistência de serviços internos, eliminando conflitos de sub-redes e garantindo acessibilidade constante via SSH.
-> * [Evidência de Implementação Estática](docs/assets/net-static-ip-implementation.png).
+<details>
+<summary><b>🔍 1. Mapeamento de Hardware e Kernel</b></summary>
+
+Antes de qualquer implementação, realizo o mapeamento completo da arquitetura para garantir conformidade com os requisitos de software.
+* **Extração de Metadados:** Identificação de CPU, Kernel e Repositórios.
+* **Evidência:** ![System Audit](docs/assets/auditoria-hardware-sistema-inxi.png)
+</details>
+
+<details>
+<summary><b>🌐 2. Troubleshooting de Rede e Conectividade</b></summary>
+
+Resolução de falhas críticas de infraestrutura para garantir a persistência dos serviços.
+* **DNS Fix:** Correção de falhas de resolução que impediam o acesso a repositórios externos.
+* **IP Estático:** Transição de DHCP para IP fixo, eliminando conflitos de sub-rede e garantindo estabilidade no acesso SSH.
+* **Evidência:** ![DNS Success](docs/assets/net-dns-fix-validation.png) | [IP Estático](docs/assets/net-static-ip-implementation.png)
+</details>
+
+<details>
+<summary><b>🌿 3. Governança com Git Mastery</b></summary>
+
+O Git é utilizado como ferramenta de governança. Demonstro domínio em fluxos de trabalho, gestão de branches e integridade de código.
+* **Gestão de Histórico:** Rastreabilidade total de mudanças em arquivos de configuração.
+* **Resolução de Conflitos:** Capacidade de recuperar estados anteriores e resolver divergências em branches de produção.
+* **Evidência:** ![Git Management](docs/assets/git-management.png)
+</details>
 
 ---
 
-### **3. Git Mastery: Governança e Resolução de Conflitos**
-O Git é a minha principal ferramenta para "Infrastructure as Code". Aqui, demonstro que domino não apenas os comandos básicos, mas o fluxo de recuperação e correção de erros.
+## Diferenciais de Operação (SRE Mindset)
 
-![Git Management](docs/assets/git-management.png) *Legenda: Gestão de branches e rastreabilidade de arquivos de configuração.*
+Diferente de um usuário comum, minha operação foca em **performance e disponibilidade**:
 
-**Diferencial Técnico:**
-* **Conflict Resolution:** Experiência prática em resolver divergências de histórico e garantir a integridade da branch main.
-* **Flow Visualization:** ![Git Troubleshooting](docs/assets/git-troubleshooting-flow.png)
+### **Minimalismo Operacional**
+Utilização do `multi-user.target` para operar o servidor sem interface gráfica, reduzindo drasticamente o consumo de memória e a superfície de ataque.
+![Systemd Status](docs/assets/systemd-target.png)
 
----
-
-## 🛡️ Terminal Survival Guide (Methodology)
-
-Diretrizes rigorosas para administração de servidores em ambientes de missão crítica:
-
-* **Minimalismo Operacional:** Uso do `multi-user.target` para reduzir o overhead e a superfície de ataque. ![Systemd Status](docs/assets/systemd-target.png)
-* **Monitoramento Proativo:** Visualização em tempo real da saúde da máquina via [Paineis de Infraestrutura](docs/assets/painel-infra.png).
-* **Safety First:** Uso de aliases protetivos e edição ágil via **Vim** para evitar downtime em janelas de manutenção.
+### **Monitoramento Proativo**
+Uso de painéis de infraestrutura via terminal para acompanhar a saúde da CPU, Memória e Disco em tempo real.
+![Painel Infra](docs/assets/painel-infra.png)
 
 ---
 
-## 🚀 Contato
-Estou pronto para aplicar estes fundamentos em desafios reais e escalar para soluções de automação e cloud.
+## Metodologia de Trabalho
+* **Terminal First:** Agilidade absoluta via linha de comando e edição ágil de arquivos via **Vim**.
+* **Safety First:** Implementação de aliases protetivos para evitar erros humanos em comandos destrutivos.
+* **Git Flow Simplicado:** Documentação constante de cada mudança (commit) para garantir reversibilidade.
+
+---
+
+## ⏭️ Próximos Passos
+Com a base sólida, este conhecimento sustenta as camadas de segurança implementadas no **Repo 2 (Identity & Cybersecurity)**.
