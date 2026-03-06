@@ -1,63 +1,51 @@
-# Repo 1: Linux Foundations & Git Mastery 🐧
+# Linux Lab: Foundations & Git Mastery 🐧
+> Provisão de infraestrutura base, automação de diagnóstico e governança de código profissional.
 
-Este repositório documenta o alicerce da minha stack tecnológica. O foco aqui é a compreensão profunda do ecossistema Linux e o domínio do Git como ferramenta de governança e colaboração técnica.
-
-> **🎯 Objetivo Profissional:** Demonstrar domínio em operações fundamentais de sistema, resolução de problemas de rede e versionamento de código, competências essenciais para qualquer operação de TI moderna.
-
----
-
-## 🛠️ Laboratórios de Engenharia & Diagnóstico
-
-Abaixo estão as principais implementações de base realizadas para garantir um ambiente estável e auditável.
-
-<details>
-<summary><b> 1. Mapeamento de Hardware e Kernel</b></summary>
-
-Antes de qualquer implementação, realizo o mapeamento completo da arquitetura para garantir conformidade com os requisitos de software.
-* **Extração de Metadados:** Identificação de CPU, Kernel e Repositórios.
-* **Evidência:** ![System Audit](docs/assets/auditoria-hardware-sistema-inxi.png)
-</details>
-
-<details>
-<summary><b> 2. Troubleshooting de Rede e Conectividade</b></summary>
-
-Resolução de falhas críticas de infraestrutura para garantir a persistência dos serviços.
-* **DNS Fix:** Correção de falhas de resolução que impediam o acesso a repositórios externos.
-* **IP Estático:** Transição de DHCP para IP fixo, eliminando conflitos de sub-rede e garantindo estabilidade no acesso SSH.
-* **Evidência:** ![DNS Success](docs/assets/net-dns-fix-validation.png) | [IP Estático](docs/assets/net-static-ip-implementation.png)
-</details>
-
-<details>
-<summary><b> 3. Governança com Git Mastery</b></summary>
-
-O Git é utilizado como ferramenta de governança. Demonstro domínio em fluxos de trabalho, gestão de branches e integridade de código.
-* **Gestão de Histórico:** Rastreabilidade total de mudanças em arquivos de configuração.
-* **Resolução de Conflitos:** Capacidade de recuperar estados anteriores e resolver divergências em branches de produção.
-* **Evidência:** ![Git Management](docs/assets/git-management.png)
-</details>
+| Categoria | Tecnologias | Status |
+| :--- | :--- | :--- |
+| **S.O.** | Ubuntu Server / Rocky Linux | ✅ CLI-only |
+| **Scripts** | Bash (Auditoria de Saúde) | ✅ Funcional |
+| **Rede** | IPv4 Estático / DNS Resiliente | ✅ Validado |
+| **Versionamento** | Git Flow & Troubleshooting | ✅ Padronizado |
 
 ---
 
-## Diferenciais de Operação (SRE Mindset)
-
-Diferente de um usuário comum, minha operação foca em **performance e disponibilidade**:
-
-### **Minimalismo Operacional**
-Utilização do `multi-user.target` para operar o servidor sem interface gráfica, reduzindo drasticamente o consumo de memória e a superfície de ataque.
-![Systemd Status](docs/assets/systemd-target.png)
-
-### **Monitoramento Proativo**
-Uso de painéis de infraestrutura via terminal para acompanhar a saúde da CPU, Memória e Disco em tempo real.
-![Painel Infra](docs/assets/painel-infra.png)
+## 🎯 Objetivo Profissional
+Estabelecer o alicerce de uma operação de TI moderna, focando em minimalismo operacional, resolução de falhas de conectividade e governança rigorosa via Git — competências fundamentais para SRE e Infraestrutura Cloud.
 
 ---
 
-## Metodologia de Trabalho
-* **Terminal First:** Agilidade absoluta via linha de comando e edição ágil de arquivos via **Vim**.
-* **Safety First:** Implementação de aliases protetivos para evitar erros humanos em comandos destrutivos.
-* **Git Flow Simplicado:** Documentação constante de cada mudança (commit) para garantir reversibilidade.
+## Troubleshooting & Engenharia de Base
+Diferente de uma configuração padrão, este laboratório documenta a resolução de falhas críticas de infraestrutura:
+
+### 1. Automação de Saúde (Terminal Survival Kit)
+Desenvolvimento de script para auditoria rápida de recursos (CPU, Memória, Disco) em servidores *Headless*.
+* **Solução:** Implementação do `scripts/terminal_survival_kit.sh`.
+* **Evidência:** [Auditoria de Saúde](docs/assets/auditoria-saude-base.png)
+
+### 2. Persistência de Rede e DNS Fix
+* **Incidente:** Falha de resolução de nomes que impedia a atualização do sistema.
+* **Resolução:** Transição de DHCP para IP estático e configuração de DNS resilientes.
+* **Evidências:** [Validação DNS](docs/assets/net-dns-fix-validation.png) | [IP Estático](docs/assets/net-static-ip-implementation.png) | [Falha de DNS Identificada](docs/assets/net-git-dns-failure.png)
+
+### 3. Governança com Git Mastery
+Domínio em fluxos de trabalho e integridade de código para governança de infraestrutura.
+* **Troubleshooting:** Gestão de histórico e resolução de conflitos de merge.
+* **Evidências:** [Gestão de Histórico](docs/assets/git-management.png) | [Git Flow](docs/assets/git-troubleshooting-flow.png)
 
 ---
 
-## ⏭️ Próximos Passos
-Com a base sólida, este conhecimento sustenta as camadas de segurança implementadas no **Repo 2 (Identity & Cybersecurity)**.
+## 🛡️ Diferenciais de Operação (SRE Mindset)
+
+* **Minimalismo Operacional:** Utilização do `multi-user.target` para operação sem interface gráfica.
+  * **Evidência:** [Systemd Target](docs/assets/systemd-target.png)
+* **Monitoramento Proativo:** Auditoria de hardware e saúde via terminal.
+  * **Evidências:** [Auditoria Hardware](docs/assets/auditoria-hardware-sistema-inxi.png) | [Painel Infra](docs/assets/painel-infra.png)
+* **Hardening:** Configuração de SSH em porta não padrão (2222) para redução de ataques automatizados.
+  * **Evidência:** [SSH Fix & Port Customization](docs/assets/ssh-fix.png)
+
+---
+
+## 📂 Estrutura do Projeto
+* `scripts/`: Automações de auditoria e configuração.
+* `docs/assets/`: Evidências técnicas da operação e troubleshooting.
