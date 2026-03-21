@@ -1,4 +1,5 @@
-# Linux Lab: Foundations & Git Mastery 🐧
+# Repo 1: Linux Lab - Foundations & Git Mastery 🐧
+
 > Provisão de infraestrutura base, automação de diagnóstico e governança de código profissional.
 
 | Categoria | Tecnologias | Status |
@@ -10,52 +11,85 @@
 
 ---
 
-## 🎯 Objetivo Profissional
-Estabelecer o alicerce de uma operação de TI moderna, focando em minimalismo operacional, resolução de falhas de conectividade e governança rigorosa via Git, competências fundamentais para SRE e Infraestrutura Cloud.
+## 🎯 Objetivo Técnico
+Estabelecer o alicerce de uma operação de TI moderna, focando em minimalismo operacional, resolução de falhas de conectividade de baixo nível e governança rigorosa via Git. Competências fundamentais para SRE e Arquitetura Cloud.
 
 ---
 
-## 🛠️ Troubleshooting & Engenharia de Base
-Diferente de uma configuração padrão, este laboratório documenta a resolução de falhas críticas de infraestrutura:
+## 📁 1. Automação de Saúde (Terminal Survival Kit)
 
-### 1. Automação de Saúde (Terminal Survival Kit)
-Desenvolvimento de script para auditoria rápida de recursos (CPU, Memória, Disco) em servidores *Headless*.
-* **Solução:** Implementação do `scripts/terminal_survival_kit.sh`.
-* **Evidência:**
-![Auditoria de Saúde](docs/assets/auditoria-saude-base.png)
+### Contexto do Problema
+Servidores *Headless* (sem interface gráfica) necessitam de mecanismos rápidos e leves para auditoria de recursos (CPU, Memória, Disco) sem depender de ferramentas externas pesadas.
 
-### 2. Persistência de Rede e DNS Fix
-* **Incidente:** Falha de resolução de nomes que impedia a atualização do sistema.
-* **Resolução:** Transição de DHCP para IP estático e configuração de DNS resilientes.
-* **Evidências:**
-![Validação DNS](docs/assets/net-dns-fix-validation.png)
-![IP Estático](docs/assets/net-static-ip-implementation.png)
+### Troubleshooting e Resolução
+* **Solução Aplicada:** Desenvolvimento do script `scripts/terminal_survival_kit.sh` em Bash puro para varredura de gargalos e dump de diagnóstico em tempo real.
 
-### 3. Governança com Git Mastery
-Domínio em fluxos de trabalho e integridade de código para governança de infraestrutura.
-* **Troubleshooting:** Gestão de histórico e resolução de conflitos de merge.
-* **Evidência:**
-![Git Management](docs/assets/git-management.png)
+### Evidência Técnica
+<details>
+  <summary>📂 Clique para ver a Auditoria de Saúde do Terminal</summary>
+
+  ![Auditoria de Saúde](docs/assets/auditoria-saude-base.png)
+</details>
+
+---
+
+## 📁 2. Persistência de Rede e DNS Fix
+
+### Contexto do Problema
+Falha intermitente de resolução de nomes (DNS) e perda de rota padrão após reinicialização da máquina virtual, impedindo o download de pacotes e atualizações críticas do sistema.
+
+### Troubleshooting e Resolução
+* **Causa Raiz:** Conflito de concessão do DHCP dinâmico no ambiente de laboratório virtualizado.
+* **Solução Aplicada:** Transição de DHCP para endereçamento IPv4 estático persistente e configuração de DNS autoritativos resilientes diretamente nos arquivos de rede.
+
+### Evidência Técnica
+<details>
+  <summary>📂 Clique para ver a Validação de DNS e IP Estático</summary>
+
+  * **Validação de DNS Resolvido:** ![Validação DNS](docs/assets/net-dns-fix-validation.png)
+  * **Configuração de IP Estático:** ![IP Estático](docs/assets/net-static-ip-implementation.png)
+</details>
+
+---
+
+## 📁 3. Governança com Git Mastery
+
+### Contexto do Problema
+Garantir a integridade do código dos scripts e evitar corrupção de ramificações (branches) durante o desenvolvimento colaborativo de infraestrutura (IaC).
+
+### Troubleshooting e Resolução
+* **Solução Aplicada:** Domínio em fluxos de trabalho do Git, gestão de histórico de commits, restauração de arquivos e resolução limpa de conflitos de merge no terminal.
+
+### Evidência Técnica
+<details>
+  <summary>📂 Clique para ver a Governança e Gestão do Git</summary>
+
+  ![Git Management](docs/assets/git-management.png)
+</details>
 
 ---
 
 ## 🛡️ Diferenciais de Operação (SRE Mindset)
 
-### Minimalismo Operacional
-Utilização do `multi-user.target` para operação sem interface gráfica, otimizando recursos.
-![Systemd Target](docs/assets/systemd-target.png)
+### Minimalismo Operacional (Tuning de Boot)
+Otimização do consumo de RAM do servidor desativando o subsistema gráfico X11.
+* **Solução:** Utilização do `multi-user.target` do Systemd para operação puramente via texto.
 
-### Monitoramento Proativo
-Auditoria de hardware e saúde via terminal para diagnóstico rápido.
-![Auditoria Hardware](docs/assets/auditoria-hardware-sistema-inxi.png)
-![Painel Infra](docs/assets/painel-infra.png)
+### Monitoramento de Hardware e Hardening Inicial
+Uso de utilitários nativos (`inxi`, `top`, `ss`) para validação de integridade e migração da porta SSH padrão (`22`) para a porta `2222` para mitigar ataques de varredura.
 
-### Hardening Inicial
-Configuração de SSH em porta não padrão (2222) para redução de ataques automatizados.
-![SSH Customization](docs/assets/ssh-fix.png)
+### Evidência Técnica
+<details>
+  <summary>📂 Clique para ver o Hardening de SSH e Monitoramento de Hardware</summary>
+
+  * **Systemd Target CLI:** ![Systemd Target](docs/assets/systemd-target.png)
+  * **Auditoria de Hardware (inxi):** ![Auditoria Hardware](docs/assets/auditoria-hardware-sistema-inxi.png)
+  * **Painel de Infraestrutura:** ![Painel Infra](docs/assets/painel-infra.png)
+  * **SSH Port Customization:** ![SSH Fix](docs/assets/ssh-fix.png)
+</details>
 
 ---
 
 ## 📂 Estrutura do Projeto
-* `scripts/`: Automações de auditoria e configuração.
-* `docs/assets/`: Evidências técnicas da operação e troubleshooting.
+* `scripts/`: Automações de auditoria e configuração do Survival Kit.
+* `docs/assets/`: Evidências técnicas da operação e troubleshooting de rede.
