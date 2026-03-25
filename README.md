@@ -1,4 +1,4 @@
-# Repo 1: Linux Lab - Foundations & Git Mastery 🐧
+# Linux Foundations & Git Mastery 🐧
 
 > Provisão de infraestrutura base, automação de diagnóstico e governança de código profissional.
 
@@ -11,7 +11,7 @@
 
 ---
 
-## 🎯 Objetivo Técnico
+## Objetivo Técnico
 Estabelecer o alicerce de uma operação de TI moderna, focando em minimalismo operacional, resolução de falhas de conectividade de baixo nível e governança rigorosa via Git. Competências fundamentais para SRE e Arquitetura Cloud.
 
 ---
@@ -69,7 +69,7 @@ Garantir a integridade do código dos scripts e evitar corrupção de ramificaç
 
 ---
 
-## 🛡️ Diferenciais de Operação (SRE Mindset)
+## Diferenciais de Operação (SRE Mindset)
 
 ### Minimalismo Operacional (Tuning de Boot)
 Otimização do consumo de RAM do servidor desativando o subsistema gráfico X11.
